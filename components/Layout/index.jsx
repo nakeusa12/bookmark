@@ -1,4 +1,5 @@
 import Head from "next/head"
+import Footer from "../Footer";
 import Header from "../Header";
 
 const Layout = ({children, title = "Home"}) => {
@@ -14,6 +15,8 @@ const Layout = ({children, title = "Home"}) => {
             <main className="antialiased">
                 {children}
             </main>
+
+            <Footer />
         </div>
     );
 }
