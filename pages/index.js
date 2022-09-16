@@ -3,6 +3,7 @@ import Faq from "../components/Faq"
 import Layout from "../components/Layout"
 import Button from "../components/Molucole/Button"
 import Title from "../components/Title"
+import { Player } from '@lottiefiles/react-lottie-player';
 
 export default function Home() {
   return (
@@ -10,19 +11,17 @@ export default function Home() {
 
       {/* Hero */}
       <div className="relative min-h-screen">
-        <div className="relative z-20 grid h-auto max-w-6xl grid-cols-12 px-4 pb-16 mx-auto pt-36 md:pb-0 md:pt-20 md:h-screen md:px-0 md:gap-0 gap-y-10">
+        <div className="relative z-20 grid h-auto max-w-7xl grid-cols-12 px-4 sm:px-6 mx-auto md:pb-0 md:px-0 md:gap-0 gap-y-10 md:h-[calc(100vh_-_6rem)]">
           <div className="flex flex-col justify-center order-2 col-span-12 mt-4 text-center md:text-left md:order-1 md:col-span-5 md:mt-0">
-            <h1 className="text-4xl font-bold md:text-5xl">A Simple Bookmark Manager</h1>
-            <p className="py-5 text-lg text-gray-500 md:text-xl">A clean and simple interface to organize your favourite website. Open a new browser tab and see your sites load instantly. Try it for free.</p>
+            <h1 className="text-4xl font-bold md:text-5xl leading-10">A Simple Bookmark Manager</h1>
+            <p className="py-10 text-lg text-gray-500 md:text-xl leading-9">A clean and simple interface to organize your favourite website. Open a new browser tab and see your sites load instantly. Try it for free.</p>
             <div className="flex justify-center space-x-4 md:justify-start">
-              <button className="px-8 py-3 font-medium text-white transition-all duration-300 bg-blue-600 rounded shadow-md hover:bg-blue-700">Get it on Chrome</button>
-              <button className="px-8 py-3 font-medium transition-all duration-300 bg-gray-200 rounded shadow-md hover:bg-gray-300">Get it on Firefox</button>
+              <button className="px-8 py-4 font-medium text-white transition-all duration-300 bg-main-primary rounded shadow-md hover:bg-indigo-500">Get it on Chrome</button>
+              <button className="px-8 py-4 font-medium transition-all duration-300 bg-gray-200 rounded shadow-md hover:bg-gray-300">Get it on Firefox</button>
             </div>
           </div>
           <div className="flex items-center justify-center order-1 col-span-12 md:justify-end md:order-2 md:col-span-7">
-            <div className="h-92">
-              <img src="/images/image1.png" alt="" className="object-cover w-full h-full"/>
-            </div>
+              <Player autoplay loop src="/lottie/hero.json" />
           </div>
         </div>
         <img src="/images/bg1.svg" className="absolute right-0 z-0 sm:bottom-60 bottom-80 md:bottom-0" alt=""/>
@@ -52,7 +51,7 @@ export default function Home() {
               <p className="py-5 text-base text-gray-500 md:text-xl">
                 Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.
               </p>
-              <button className="w-32 py-3 font-medium text-white transition-all duration-300 bg-blue-600 rounded shadow-md hover:bg-blue-700">More Info</button>
+              <button className="w-32 py-3 font-medium text-white transition-all duration-300 bg-main-primary rounded shadow-md hover:bg-indigo-500">More Info</button>
             </div>
             </div>
         </div>
@@ -75,20 +74,20 @@ export default function Home() {
       </div>
     
       {/* Section4 */}
-        <div class="max-w-6xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8">
           <div className="flex flex-col items-center space-y-5 mb-14 md:mb-0">
             <Title title="Frequently Asked Questions" subtitle=" Here are some of our FAQs. If you have any other questions you'd like answered please feel free to email us." />
           </div>
           <Faq />
 
           <div className="flex justify-center w-full mt-10 mb-6">
-            <Button bgColor="bg-blue-600" bgColorHover="bg-blue-800" name="More Info" />
+            <Button bgColor="bg-main-primary" bgColorHover="bg-blue-800" name="More Info" />
           </div>
         </div>
 
 
       {/* Section5 */}
-      <div className="w-full px-4 bg-blue-600 md:px-0">
+      <div className="w-full px-4 bg-main-primary md:px-0">
         <div className="flex flex-col items-center justify-center max-w-6xl mx-auto h-80">
           <h5 className="text-sm font-medium tracking-widest text-white">35.000+ ALREADY JOINED</h5>
           <h2 className="w-full my-5 text-4xl font-semibold text-center text-white md:w-2/5">Stay up-to-date with what we're doing</h2>

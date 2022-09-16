@@ -38,29 +38,29 @@ const Faq = () => {
     return ( 
         <>
         {datas.map((data, index) => (
-            <div key={index} class="max-w-3xl mx-auto divide-y-2 divide-gray-200">
-                <dl class="mt-6 space-y-6 divide-y divide-gray-200 border-t border-gray-200">
-                <div class="pt-6">
-                    <dt class="text-lg">
-                    <button type="button" class="focus:outline-none text-left w-full flex justify-between items-start text-gray-400" aria-controls="faq-0" aria-expanded="false"  selected={selected === index} onClick={() => toggle(index)}>
-                        <span class="font-medium text-gray-900">
+            <div key={index} className="max-w-3xl mx-auto divide-y-2 divide-gray-200">
+                <dl className="mt-6 space-y-6 divide-y divide-gray-200 border-t border-gray-200">
+                <div className="pt-6">
+                    <dt className="text-lg">
+                    <button type="button" className="focus:outline-none text-left w-full flex justify-between items-start text-gray-400" aria-controls="faq-0" aria-expanded="false"  selected={selected === index} onClick={() => toggle(index)}>
+                        <span className="font-medium text-gray-900">
                         {data.question}
                         </span>
-                        <span class="ml-6 h-7 flex items-center">
+                        <span className="ml-6 h-7 flex items-center">
                             {selected === index ? 
-                            <svg class="h-6 w-6 transform text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg className="h-6 w-6 transform text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
                             </svg>
                             :
-                            <svg class="h-6 w-6 transform text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            <svg className="h-6 w-6 transform text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
                             </svg>
                             }
                         </span>
                     </button>
                     </dt>
-                    <dd class={`mt-5 pr-12 ${selected === index ? "block" : "hidden"}`} id="faq-0" >
-                        <p class="text-base text-gray-500">
+                    <dd className={`mt-5 pr-12 ${selected === index ? "block" : "hidden"}`} id="faq-0" >
+                        <p className="text-base text-gray-500">
                         {data.answer}
                         </p>
                     </dd>
